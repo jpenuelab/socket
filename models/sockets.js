@@ -9,7 +9,7 @@ class Sockets {
       //Escuchar Evento: mensaje-from-client
       socket.on("mensaje-from-client", (data) => {
         console.log(data);
-        socket.emit("mensaje-from-server", data);
+        this.io.emit("mensaje-from-server", data);
       });
     });
   }
